@@ -19,12 +19,8 @@
 package jmemorize.core;
 
 import java.awt.Dimension;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -51,7 +47,7 @@ import javax.swing.text.StyledDocument;
  */
 public class FormattedText implements Cloneable
 {
-    public FormattedText(FormattedText mText) {
+    public FormattedText() {
     }
 
     public class ParseException extends Exception

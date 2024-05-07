@@ -117,7 +117,7 @@ public class CardSide
      */
     public CardSide(CardSide original)
     {
-        this.m_text = new FormattedText(original.m_text);
+        this.m_text = new FormattedText();
         this.m_imageIDs = new LinkedList<>(original.m_imageIDs);
         this.m_observers = new LinkedList<>(original.m_observers);
     }

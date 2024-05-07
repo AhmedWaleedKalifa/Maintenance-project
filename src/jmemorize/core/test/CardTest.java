@@ -67,20 +67,19 @@ public class CardTest extends TestCase
             originalImages, m_card.getFrontSide().getImages());
     }
 
-    public void testCardClonesBasic()
-    {
+    public void testCardClonesBasic() {
         m_category.addCard(m_card);
         assertEquals(1, m_category.getCards().size());
 
-        Card clonedCard = (Card)m_card.clone();
-        
+        Card clonedCard = new Card(m_card);
+
         assertEquals(1, m_category.getCards().size());
         assertEquals(null, clonedCard.getCategory());
     }
 
-    public void testCardClonesText()
-    {
-        Card clonedCard = (Card)m_card.clone();
+
+    public void testCardClonesText() {
+        Card clonedCard = new Card(m_card); // Using copy constructor
         clonedCard.setSides("other front", "other back");
 
         assertEquals("test_card", m_card.getFrontSide().toString());
@@ -89,21 +88,20 @@ public class CardTest extends TestCase
         assertEquals("other front", clonedCard.getFrontSide().toString());
         assertEquals("other back", clonedCard.getBackSide().toString());
     }
-    
-    public void testCardClonesImages()
-    {
+
+    public void testCardClonesImages() {
         List<String> images = new LinkedList<String>();
         images.add("foo.png");
         m_card.getFrontSide().setImages(images);
-        
-        Card clonedCard = (Card)m_card.clone();
+
+        Card clonedCard = new Card(m_card); // Using copy constructor
         assertEquals(images, clonedCard.getFrontSide().getImages());
-        
+
         List<String> noImages = new LinkedList<String>();
         m_card.getFrontSide().setImages(noImages);
-        
+
         assertEquals("clone should not reference originals image list",
-            images, clonedCard.getFrontSide().getImages());
+                images, clonedCard.getFrontSide().getImages());
     }
     
     public void testCardWithoutProgressClonesImages()
@@ -122,10 +120,9 @@ public class CardTest extends TestCase
             images, clonedCard.getFrontSide().getImages());
     }
 
-    public void testCardClonesStatss()
-    {
+    public void testCardClonesStats() {
         m_category.addCard(m_card);
-        Card clonedCard = (Card)m_card.clone();
+        Card clonedCard = new Card(m_card); // Using copy constructor
 
         assertEquals(m_card.getLevel(), clonedCard.getLevel());
 
