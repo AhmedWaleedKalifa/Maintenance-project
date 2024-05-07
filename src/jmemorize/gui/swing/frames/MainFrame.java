@@ -97,6 +97,8 @@ import jmemorize.gui.swing.widgets.CategoryComboBox;
 import jmemorize.gui.swing.widgets.CategoryTree;
 import jmemorize.util.ExtensionFileFilter;
 
+import static jmemorize.core.Events.REMOVED_EVENT;
+
 /**
  * The main window of jMemorize. It has a stats panel in the upper part and a
  * card table/learn panel in the bottom. Optionaly there is also a category tree

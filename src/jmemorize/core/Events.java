@@ -1,7 +1,7 @@
 /*
  * jMemorize - Learning made easy (and fun) - A Leitner flashcards tool
  * Copyright(C) 2004-2006 Riad Djemili
- * 
+ *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 1, or (at your option)
@@ -22,8 +22,10 @@ package jmemorize.core;
  * @see CategoryObserver
  * @author djemili
  */
-public interface Events // TODO move to category class
+public class Events // TODO move to category class
 {
+    Events() {}
+
     public static final int ADDED_EVENT   = 0;
     public static final int REMOVED_EVENT = 1;
     public static final int MOVED_EVENT   = 2;

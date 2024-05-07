@@ -25,7 +25,7 @@ package jmemorize.core;
  * 
  * @author djemili
  */
-public interface CategoryObserver extends Events
+public interface CategoryObserver
 {
     /**
      * Gets notified when a card event happens in the observed category or in
