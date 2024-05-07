@@ -28,6 +28,8 @@ import jmemorize.core.Category;
 import jmemorize.core.CategoryObserver;
 import junit.framework.TestCase;
 
+import static jmemorize.core.Events.*;
+
 
 /**
  * @author djemili

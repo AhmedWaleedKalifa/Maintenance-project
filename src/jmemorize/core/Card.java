@@ -29,7 +29,7 @@ import jmemorize.core.CardSide.CardSideObserver;
  * @author djemili
  * @version $Id: Card.java 1048 2008-01-21 21:40:00Z djemili $
  */
-public class Card implements Events, Cloneable
+public class Card extends Events implements Cloneable
 {
     public static final long    ONE_DAY     = 1000 * 60 * 60 * 24;
     public static final boolean CLONE_DATES = Main.isDevel();
@@ -82,6 +82,7 @@ public class Card implements Events, Cloneable
     
     public Card(Date created, CardSide frontSide, CardSide backSide)
     {
+        super();
         m_dateCreated = cloneDate(created);
         m_dateModified = cloneDate(created);
         m_dateTouched = cloneDate(created);

@@ -59,6 +59,8 @@ import jmemorize.util.EscapableFrame;
 import com.jgoodies.forms.factories.Borders;
 import com.jgoodies.forms.factories.ButtonBarFactory;
 
+import static jmemorize.core.Events.*;
+
 /**
  * The window that is used to edit cards. Note this is a singleton class. The
  * same window will be reused for all editting.

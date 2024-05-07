@@ -52,12 +52,13 @@ import com.jgoodies.forms.builder.DefaultFormBuilder;
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
+import static jmemorize.core.Events.EDITED_EVENT;
+import static jmemorize.core.Events.MOVED_EVENT;
+
 /**
  * @author djemili
  */
-public class QuizPanel extends JPanel implements Events, 
-    LearnCardObserver, CategoryObserver, LearnSessionObserver
-{
+public class QuizPanel extends JPanel implements LearnCardObserver, LearnSessionObserver, CategoryObserver {
     private abstract class AbstractLearnAction extends AbstractAction2
     {
         private boolean m_shortCutAdded = false; 

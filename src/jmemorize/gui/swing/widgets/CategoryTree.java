@@ -62,6 +62,8 @@ import jmemorize.gui.swing.actions.edit.PasteAction;
 import jmemorize.gui.swing.actions.edit.RemoveAction;
 import jmemorize.gui.swing.frames.MainFrame;
 
+import static jmemorize.core.Events.*;
+
 
 /**
  * A category tree that shows a visual representation of the categories. It also

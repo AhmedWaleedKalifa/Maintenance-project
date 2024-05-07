@@ -40,6 +40,8 @@ import jmemorize.core.Category;
 import jmemorize.core.CategoryObserver;
 import jmemorize.util.EquivalenceClassSet;
 
+import static jmemorize.core.Events.*;
+
 /**
  * A learn session is instantiated with a LearnSettings object which defines the
  * rules which the session should handle cards.

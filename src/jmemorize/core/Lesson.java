@@ -24,6 +24,8 @@ import jmemorize.core.learn.LearnHistory;
 import jmemorize.gui.LC;
 import jmemorize.gui.Localization;
 
+import static jmemorize.core.Events.EXPIRED_EVENT;
+
 /**
  * @author djemili
  */
