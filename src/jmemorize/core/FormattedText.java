@@ -51,6 +51,9 @@ import javax.swing.text.StyledDocument;
  */
 public class FormattedText implements Cloneable
 {
+    public FormattedText(FormattedText mText) {
+    }
+
     public class ParseException extends Exception
     {
         public ParseException(String message)
